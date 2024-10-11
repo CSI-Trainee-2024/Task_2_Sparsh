@@ -11,14 +11,16 @@ function add_workout() {
     console.log(workout_minutes.value.toString());
     console.log(workout_seconds.value.toString());
 
-    // && workout_hours.value.toString() !== "" && workout_minutes.value.toString() !== "" && 
-    // workout_seconds.value.toString() !== ""
-
-    if (workout_text.value !== "") {
-        console.log("inside");
+    
+    if (workout_text.value !== "" && workout_hours.value.toString() !== "" && workout_minutes.value.toString() !== "" && 
+    workout_seconds.value.toString() !== "") {
         workouts.push({
             "text": workout_text.value, "hours": workout_hours.value.toString(), 
             "mintues": workout_minutes.value.toString(), "seconds": workout_seconds.value.toString()});
+        
+        workouts.push({
+            "text": 'Rest', "hours": '0', "mintues": '0', "seconds": '30'});
+        
     }
 
     localStorage.setItem("workout_list", JSON.stringify(workouts));
@@ -29,18 +31,27 @@ function add_workout() {
 
 function delete_workout(index) {
     workouts.splice(index, 1);
-    localStorage.setItem("todo-list", JSON.stringify(workouts));
+    localStorage.setItem("workout_list", JSON.stringify(workouts));
     list_workouts();
 }
 
 function list_workouts() {
     var list = "";
+    //     <p id = "timer_display">1:30</p>
+    //     <button type="submit" class="button">Delete Workout</button>
+    
     for (var i = 0; i < workouts.length; i++) {
-        list += "<li>";
-        list += workouts[i].workout_description + " ";
-        list += "<span onclick='delete_workout(" + i + ")'><button class='remove'>Remove</button></span></li>";
+        list += "<div id = 'workout_card' class='workout_form'>"
+        list += "<h3>" + workouts[i].text + "</h3>";
+        list += "<p id='timer_display'>"
+        list +=  workouts[i].hours +" H " + workouts[i].mintues + " M " + workouts[i].seconds + " S " + "</p>"
+        list +=  "<button type='submit' onclick='delete_workout("+ i +")'class='button'>Delete Workout</button>"
+        list += "</div>"
+        // list += workouts[i].workout_description + " ";
+        // list += "<span onclick='delete_workout(" + i + ")'><button class='remove'>Remove</button></span></li>";
     }
-    document.querySelector("#todo-list").innerHTML = list;
+    console.log(list);
+    document.querySelector("#workouts").innerHTML = list;
 }
 
 (function () {
