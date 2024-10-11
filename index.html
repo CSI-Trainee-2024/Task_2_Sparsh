@@ -11,18 +11,18 @@
 <body>
 
     <div class="head_container">
-            <h1 class="heading">Exercise Web Portal</h1>
-            <div>
-                <button class="button" onclick="begin_workout()">Workout Begin</button>
-                <button class="button" onclick="pause_workout()">Pause Workout</button>
-                <button class="button" onclick="resume_workout()">Resume Workout</button>
-                <button class="button" onclick="reset_workout()">Reset Workout</button>
-                <button class="button" onclick="end_workout()">End Workout</button>
-            </div>  
+        <h1 class="heading">Exercise Web Portal</h1>
+        <div>
+            <button class="button" onclick="begin_workout()">Workout Begin</button>
+            <button class="button" onclick="pause_workout()">Pause Workout</button>
+            <button class="button" onclick="resume_workout()">Resume Workout</button>
+            <button class="button" onclick="reset_workout()">Reset Workout</button>
+            <button class="button" onclick="end_workout()">End Workout</button>
+        </div>
     </div>
 
     <form class="workout_form">
-        <input type="text" class="text_input" id = "workout_text" placeholder="Workout Name" />
+        <input type="text" class="text_input" id="workout_text" placeholder="Workout Name" />
         <div>
             <label for="hours_interval">Hours:</label>
             <input type="number" id="hours_interval" class="time_input" min="0" />
@@ -34,7 +34,7 @@
         <button onclick="add_workout()" class="button ">Add Workout</button>
     </form>
 
-    <ul id = "workouts"></ul>
+    <ul id="workouts"></ul>
 
     <script src="script.js"></script>
 </body>

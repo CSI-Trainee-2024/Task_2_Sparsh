@@ -35,8 +35,8 @@ function delete_workout(index) {
     list_workouts();
 }
 
-function skip_workout(index){
-    workouts[index].completed_seconds = workouts[index].seconds ;
+function skip_workout(index) {
+    workouts[index].completed_seconds = workouts[index].seconds;
     localStorage.setItem("workout_list", JSON.stringify(workouts));
     list_workouts();
 
@@ -51,9 +51,9 @@ function list_workouts() {
         list += "<h3>" + workouts[i].text + "</h3>";
         list += "<p id='timer_display'>";
         list += show_time(seconds) + "</p>";
-        list +="<div>"
+        list += "<div>"
         list += "<button type='submit' onclick='delete_workout(" + i + ")'class='button'>Delete Workout</button>";
-        list +="<button type='submit' onclick='skip_workout(" + i + ")'class='button'>Skip Workout</button>";
+        list += "<button type='submit' onclick='skip_workout(" + i + ")'class='button'>Skip Workout</button>";
         list += "</div> </div>";
     }
     console.log(list);
@@ -102,10 +102,10 @@ function reset_workout() {
     list_workouts();
 }
 
-function end_workout(){
+function end_workout() {
     pause_workout();
     for (var i = 0; i < workouts.length; i++) {
-        workouts[i].completed_seconds = workouts[i].seconds ;
+        workouts[i].completed_seconds = workouts[i].seconds;
     }
     localStorage.setItem("workout_list", JSON.stringify(workouts));
     list_workouts();
