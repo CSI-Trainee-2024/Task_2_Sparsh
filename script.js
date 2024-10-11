@@ -115,8 +115,3 @@ function show_time(seconds) {
         begin_workout();
     }
 })();
-
-
-
-
-
