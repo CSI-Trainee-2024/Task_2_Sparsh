@@ -53,5 +53,29 @@ function list_workouts() {
 
 
 
+function begin_workout() {
+    var workout_length = workouts.length;
+    var index = 0;
+    if(workout_length === 0){
+        return;
+    }
+    timerInterval = setInterval(() => {
+            if(index >= workout_length){
+                clearInterval(timerInterval);
+                return;
+            }
+            else if (parseInt(workouts[index].completed_seconds) >= parseInt(workouts[index].seconds)) {
+                index += 1;
+                
+            } else {
+                workouts[index].completed_seconds = parseInt(workouts[index].completed_seconds) + 1;
+                localStorage.setItem("workout_list", JSON.stringify(workouts));
+                list_workouts();
+            }
+    }, 1000);
+}
+
+
+
 
 
