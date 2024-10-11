@@ -202,16 +202,7 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    /* padding: 4px 20vh;
-    border: 1px solid black;
-    border-radius: 10px;
-    font-size: 1rem;
-    color: black; */
-    /* padding: 10px;
-    border-radius: 5px;
-    border: 0;
-    
-    font-size: 16px; */
+
 }
 
 #addButton,
@@ -225,21 +216,10 @@ body {
     font-size: 15px;
     margin: 4px 10px;
     transition: 0.3s;
-    /* padding: 8px;
-    /* width: px; */
-    /* border-radius: 8px;
-    background: #ececec;
-    border: 0; */
-    /* font-weight: bolder; */
-    /* font-size: 15px;
-    margin: 0 17px; */
 
 }
 
-/* #todo-input:focus {
-    outline: none;
-  } */
-*/ #todo-list li {
+ #todo-list li {
     list-style-type: upper-roman;
     font-size: 17px;
     font-weight: 700;
