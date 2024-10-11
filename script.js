@@ -1,13 +1,12 @@
 var workouts = JSON.parse(localStorage.getItem("workout_list")) || [];
 var is_timer_on = JSON.parse(localStorage.getItem("is_timer_on")) || false;
+var timerInterval;
 
 function add_workout() {
     var workout_text = document.querySelector("#workout_text").value;
     var workout_hours = document.querySelector("#hours_interval").value.toString();
     var workout_minutes = document.querySelector("#minutes_interval").value.toString();
     var workout_seconds = document.querySelector("#seconds_interval").value.toString();
-
-    console.log(workout_hours);
 
     if (workout_text !== "" && workout_hours !== "" && workout_minutes !== "" && workout_seconds !== "") {
 
@@ -36,6 +35,13 @@ function delete_workout(index) {
     list_workouts();
 }
 
+function skip_workout(index){
+    workouts[index].completed_seconds = workouts[index].seconds ;
+    localStorage.setItem("workout_list", JSON.stringify(workouts));
+    list_workouts();
+
+}
+
 function list_workouts() {
     var list = "";
 
@@ -45,8 +51,10 @@ function list_workouts() {
         list += "<h3>" + workouts[i].text + "</h3>";
         list += "<p id='timer_display'>";
         list += show_time(seconds) + "</p>";
+        list +="<div>"
         list += "<button type='submit' onclick='delete_workout(" + i + ")'class='button'>Delete Workout</button>";
-        list += "</div>";
+        list +="<button type='submit' onclick='skip_workout(" + i + ")'class='button'>Skip Workout</button>";
+        list += "</div> </div>";
     }
     console.log(list);
     document.querySelector("#workouts").innerHTML = list;
@@ -63,6 +71,7 @@ function begin_workout() {
     timerInterval = setInterval(() => {
         if (index >= workout_length) {
             clearInterval(timerInterval);
+            localStorage.setItem("is_timer_on", false);
             return;
         }
         else if (parseInt(workouts[index].completed_seconds) >= parseInt(workouts[index].seconds)) {
@@ -88,6 +97,15 @@ function resume_workout() {
 function reset_workout() {
     for (var i = 0; i < workouts.length; i++) {
         workouts[i].completed_seconds = "0";
+    }
+    localStorage.setItem("workout_list", JSON.stringify(workouts));
+    list_workouts();
+}
+
+function end_workout(){
+    pause_workout();
+    for (var i = 0; i < workouts.length; i++) {
+        workouts[i].completed_seconds = workouts[i].seconds ;
     }
     localStorage.setItem("workout_list", JSON.stringify(workouts));
     list_workouts();

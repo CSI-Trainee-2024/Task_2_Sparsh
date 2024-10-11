@@ -50,7 +50,6 @@ body {
 
 }
 
-
 .text_input {
     padding: 8px;
     border: 1px solid black;
@@ -62,7 +61,6 @@ body {
     min-width: 20vw;
 }
 
-
 .time_input {
     padding: 8px;
     border: 1px solid black;
@@ -72,8 +70,6 @@ body {
     max-width: 1vw;
     height: 4vh;
 }
-
-
 
 .workout_form {
     display: flex;
