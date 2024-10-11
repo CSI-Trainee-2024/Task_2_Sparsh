@@ -38,8 +38,6 @@ body{
     transition: 0.3s;
 
   }
-
-  
   .template {
     background-color: orange;
     margin: 30px 30px 30px 30px;
@@ -52,9 +50,10 @@ body{
     box-shadow: 10px 10px 0px rgba(0, 0, 0, 1);
   }
 
-  .add_exercise{
+ .add_exercise{
 
     padding: 0 30vh;
+    font-size: 15px;
     height: 30px;
     align-items: center;
     justify-content: center;
@@ -68,4 +67,63 @@ body{
    font-size: 1rem;
    color: black;
       
+  }
+
+ .template_1 {
+    background-color: orange;
+    margin: 30px 30px 30px 30px;
+    padding: 10px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 1);
+  }
+
+ .template_2 {
+    background-color: orange;
+    margin: 30px 30px 30px 30px;
+    padding: 10px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 1);
+  }
+
+  .add_temp{
+
+    padding: 0 30vh;
+    height: 30px;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+  }
+
+  .end_block{
+    background-color: orange;
+    margin: 170px 30px 30px 30px;
+    padding: 20px 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 1);
+
+  }
+
+  .end_work{
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: aquamarine;
+    border: 2px solid black ;
+    border-radius: 10px;
+    color: black;
+    width: 20vw;
+    transition: 0.3s;
+    
   }
