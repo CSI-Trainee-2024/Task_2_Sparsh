@@ -42,11 +42,11 @@ function skip_workout(index) {
 
 }
 
-function hide_end_workout(){
-    if(localStorage.getItem('is_timer_on') === 'true'){
-        document.getElementById("show_end").style.visibility = 'visible'; 
+function hide_end_workout() {
+    if (localStorage.getItem('is_timer_on') === 'true') {
+        document.getElementById("show_end").style.visibility = 'visible';
     }
-    else{
+    else {
         document.getElementById("show_end").style.visibility = 'hidden';
     }
 }
