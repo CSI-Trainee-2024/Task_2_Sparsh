@@ -132,6 +132,22 @@ body {
     box-shadow: 10px 10px 0px rgba(0, 0, 0, 1);
 }
 
+.table_style{
+
+    width: 95%;
+    color: black;
+}
+
+table{
+    margin: 0px 5vh;
+    font-weight: bold;
+    background-color: aqua;
+    color: black;
+    
+
+}
+
+
 
 @media screen and (max-width: 760px) {
 
