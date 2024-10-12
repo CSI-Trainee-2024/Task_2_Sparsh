@@ -118,11 +118,6 @@ function reset_workout() {
 
 function end_workout() {
     pause_workout();
-    // for (var i = 0; i < workouts.length; i++) {
-    //     workouts[i].completed_seconds = workouts[i].seconds;
-    // }
-    // localStorage.setItem("workout_list", JSON.stringify(workouts));
-    // list_workouts();
     window.location.href = "result_page.html";
 }
 
