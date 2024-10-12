@@ -9,8 +9,8 @@ function data_workouts() {
     for (var i = 0; i < workouts.length; i++) {
         var seconds = parseInt(workouts[i].seconds);
         var completed_seconds = parseInt(workouts[i].completed_seconds);
-        if (workouts[i].text !="Rest"){
-    
+        if (workouts[i].text != "Rest") {
+
             table_data += "<tr>";
             table_data += "<td>" + workouts[i].text + "</td>";
             table_data += "<td>" + show_time(completed_seconds) + "</td>";
@@ -40,5 +40,5 @@ function show_time(seconds) {
 }
 
 (function () {
-   data_workouts();
+    data_workouts();
 })();
