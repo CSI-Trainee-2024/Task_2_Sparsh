@@ -3,10 +3,10 @@ var is_timer_on = JSON.parse(localStorage.getItem("is_timer_on")) || false;
 var timerInterval;
 
 function add_workout() {
-    var workout_text = document.querySelector("#workout_text").value;
-    var workout_hours = document.querySelector("#hours_interval").value.toString();
-    var workout_minutes = document.querySelector("#minutes_interval").value.toString();
-    var workout_seconds = document.querySelector("#seconds_interval").value.toString();
+    var workout_text = document.getElementById("workout_text").value;
+    var workout_hours = document.getElementById("hours_interval").value.toString();
+    var workout_minutes = document.getElementById("minutes_interval").value.toString();
+    var workout_seconds = document.getElementById("seconds_interval").value.toString();
 
     if (workout_text !== "" && workout_hours !== "" && workout_minutes !== "" && workout_seconds !== "") {
 
@@ -42,6 +42,15 @@ function skip_workout(index) {
 
 }
 
+function hide_end_workout(){
+    if(localStorage.getItem('is_timer_on') === 'true'){
+        document.getElementById("show_end").style.visibility = 'visible'; 
+    }
+    else{
+        document.getElementById("show_end").style.visibility = 'hidden';
+    }
+}
+
 function list_workouts() {
     var list = "";
 
@@ -57,7 +66,7 @@ function list_workouts() {
         list += "</div> </div>";
     }
     console.log(list);
-    document.querySelector("#workouts").innerHTML = list;
+    document.getElementById("workouts").innerHTML = list;
 }
 
 function begin_workout() {
@@ -68,6 +77,7 @@ function begin_workout() {
         return;
     }
     localStorage.setItem("is_timer_on", true);
+    hide_end_workout();
     timerInterval = setInterval(() => {
         if (index >= workout_length) {
             clearInterval(timerInterval);
@@ -81,6 +91,7 @@ function begin_workout() {
             workouts[index].completed_seconds = parseInt(workouts[index].completed_seconds) + 1;
             localStorage.setItem("workout_list", JSON.stringify(workouts));
             list_workouts();
+
         }
     }, 1000);
 }
@@ -99,6 +110,8 @@ function reset_workout() {
         workouts[i].completed_seconds = "0";
     }
     localStorage.setItem("workout_list", JSON.stringify(workouts));
+    pause_workout();
+    hide_end_workout();
     list_workouts();
 }
 
@@ -128,6 +141,7 @@ function show_time(seconds) {
 }
 
 (function () {
+    hide_end_workout();
     list_workouts();
     if (localStorage.getItem("is_timer_on") === "true") {
         begin_workout();
