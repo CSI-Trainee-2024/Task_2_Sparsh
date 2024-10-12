@@ -22,13 +22,19 @@
 
     <form class="workout_form">
         <input type="text" class="text_input" id="workout_text" placeholder="Workout Name" />
-        <div>
-            <label for="hours_interval">Hours:</label>
-            <input type="number" id="hours_interval" class="time_input" min="0" />
-            <label for="minutes_interval">Minutes:</label>
-            <input type="number" id="minutes_interval" min="0" class="time_input" />
-            <label for="second_interval">Seconds:</label>
-            <input type="number" id="seconds_interval" min="0" class="time_input" />
+        <div class="time_form">
+            <div class="time_elements">
+                <label for="hours_interval">Hours:</label>
+                <input type="number" id="hours_interval" class="time_input" min="0" />
+            </div>
+            <div class="time_elements">
+                <label for="minutes_interval">Minutes:</label>
+                <input type="number" id="minutes_interval" min="0" class="time_input" />
+            </div>
+            <div class="time_elements">
+                <label for="second_interval">Seconds:</label>
+                <input type="number" id="seconds_interval" min="0" class="time_input" />
+            </div>
         </div>
         <button onclick="add_workout()" class="button ">Add Workout</button>
     </form>

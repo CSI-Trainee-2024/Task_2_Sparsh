@@ -91,6 +91,15 @@ body {
     min-width: 20vw;
 }
 
+.time_form{
+    display: flex;
+}
+
+.time_elements{
+    margin-right: 10px;
+}
+
+
 .time_input {
     background-color: red;
     padding: 8px;
@@ -195,9 +204,15 @@ body {
 
       }
 
+      .time_form{
+        display: flex;
+
+      }
+
+
       .time_input{
         margin: 10px 0px 10px 4px ;
-        width: 70%
+        min-width: 70%
       }
 
       .end_work{
