@@ -29,6 +29,17 @@ body {
     box-shadow: 10px 10px 0px rgba(0, 0, 0, 1);
 }
 
+.report_container{
+    background-color: orange;
+    margin: 30px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 1);
+}
+
 .heading {
 
     padding: 8px 20px;

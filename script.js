@@ -69,6 +69,7 @@ function list_workouts() {
     document.getElementById("workouts").innerHTML = list;
 }
 
+
 function begin_workout() {
 
     var workout_length = workouts.length;
@@ -122,6 +123,7 @@ function end_workout() {
     }
     localStorage.setItem("workout_list", JSON.stringify(workouts));
     list_workouts();
+    data_workouts();
 }
 
 function show_time(seconds) {
