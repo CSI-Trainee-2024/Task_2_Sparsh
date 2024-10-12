@@ -125,7 +125,7 @@ body {
     display: flex;
     justify-content: space-around;
     background-color: orange;
-    margin: 30px 30px 30px 30px;
+    margin: 30px;
     padding: 10px;
     border-radius: 20px;
     box-shadow: 10px 10px 0px rgba(0, 0, 0, 1);
@@ -135,6 +135,9 @@ body {
 
     width: 95%;
     color: black;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 1);
 }
 
 table{
@@ -148,6 +151,14 @@ table,th,td{
     border: 1px solid black;
 }
 
+.workout_name{
+    width: 40%;
+}
+
+.workout_time{
+    width: 20%;
+}
+
 
 @media screen and (max-width: 760px) {
 
@@ -158,6 +169,7 @@ table,th,td{
 
     .table_style{
         max-width: 90%;
+        padding: 20px;
     }
 
     .button {
@@ -168,9 +180,6 @@ table,th,td{
     }
 
     .workout_form {
-        padding: 5px;
-        display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
@@ -192,9 +201,21 @@ table,th,td{
 
     }
 
+    .workout_form{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .workout_name{
+        width: 80%;
+    }
+
+    .workout_time{
+        width: 80%;
+    }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
 
     .head_container {
         display: flex;
@@ -221,7 +242,7 @@ table,th,td{
     }
 
     .workout_form {
-        padding: 5px;
+    
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -251,6 +272,18 @@ table,th,td{
         justify-content: center;
         align-items: center;
 
+    }
+
+    .workout_name{
+       display: flex;
+       justify-content: center;
+        width: 80%;
+    }
+
+    .workout_time{
+        width: 80%;
+        justify-content: center;
+        display: flex;
     }
 
 }

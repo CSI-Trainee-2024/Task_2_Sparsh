@@ -57,8 +57,8 @@ function list_workouts() {
     for (var i = 0; i < workouts.length; i++) {
         var seconds = parseInt(workouts[i].seconds) - parseInt(workouts[i].completed_seconds);
         list += "<div id = 'workout_card' class='workout_form'>";
-        list += "<h3>" + workouts[i].text + "</h3>";
-        list += "<p id='timer_display'>";
+        list += "<h3 class='workout_name'>" + workouts[i].text + "</h3>";
+        list += "<p class='workout_time' id='timer_display'>";
         list += show_time(seconds) + "</p>";
         list += "<div>"
         list += "<button type='submit' onclick='delete_workout(" + i + ")'class='button'>Delete Workout</button>";
