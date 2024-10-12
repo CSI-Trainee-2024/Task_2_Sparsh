@@ -62,14 +62,18 @@ body {
     cursor: pointer;
 }
 
+.end_work{
+    
+    margin: 30px 2.5rem;
+}
+
 .button_end{
     background-color: aqua;
     border: 2px solid black;
     border-radius: 10px;
-    width: 95%;
     color:black;
+    width: 100%;
     font-size: 15px;
-    margin: 30px 5vh;
     padding: 10px;
     transition: 0.3s;
     cursor: pointer;
@@ -133,7 +137,8 @@ body {
 
       .text_input{
         margin: 10px 0px;
-        padding: 0px 15vh;
+        padding: 0px 20px;
+
       }
 
       .time_input{
@@ -141,11 +146,68 @@ body {
         max-width: 5vw;
       }
 
-      .button_end{
-        padding: 10px;
-        margin: 10px 0px 10px 10px;
+      .end_work{
+        justify-content: center;
+        align-items: center;
+        
       }
 
 }
+
+@media screen and (max-width: 450px) {
+
+    .head_container{
+        display: flex;
+        flex-direction: column;
+        
+      }
+    
+    .heading{
+        justify-content: center;
+        align-items: center;    
+    }
+
+    
+
+      .button{
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        max-width: 20vh;
+        min-width: 70%;
+        align-items: center;
+    
+    
+      }
+
+      .workout_form{
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .text_input{
+        margin: 10px 0px;
+         min-width: 70%;;
+        padding: 0px 20px;
+
+      }
+
+      .time_input{
+        margin: 10px 0px 10px 4px ;
+        width: 70%
+      }
+
+      .end_work{
+        justify-content: center;
+        align-items: center;
+        
+      }
+
+}
+
+
 
 
