@@ -22,7 +22,6 @@ function data_workouts() {
     document.getElementById("table_record").innerHTML = table_data;
 }
 
-
 function show_time(seconds) {
     let hours = Math.floor(seconds / 3600);
     if (hours < 10) {

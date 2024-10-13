@@ -10,9 +10,9 @@ function add_workout() {
 
     if (workout_text !== "" && workout_hours !== "" && workout_minutes !== "" && workout_seconds !== "") {
 
-        var seconds = parseInt(workout_hours, 10) * 3600 +
-            parseInt(workout_minutes, 10) * 60 +
-            parseInt(workout_seconds, 10);
+        var seconds = parseInt(workout_hours) * 3600 +
+            parseInt(workout_minutes) * 60 +
+            parseInt(workout_seconds);
 
         workouts.push({
             "text": workout_text, "seconds": seconds.toString(), "completed_seconds": "0"

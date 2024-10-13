@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Home</title>
 </head>
-
 <body>
 
+    <!-- Heading template -->
     <div class="head_container">
         <h1 class="heading">Muscle Booster-Plan Workouts</h1>
         <div>
@@ -20,6 +19,7 @@
         </div>
     </div>
 
+    <!-- Workout form Input template -->
     <form class="workout_form">
         <input type="text" class="text_input" id="workout_text" placeholder="Workout Name" />
         <div class="time_form">
@@ -39,7 +39,10 @@
         <button onclick="add_workout()" class="button ">Add Workout</button>
     </form>
 
+    <!-- Workout form display template -->
     <ul id="workouts"></ul>
+
+    <!-- End workout button -->
     <div class="end_work">
         <button class="button_end" id="show_end" onclick="end_workout()">End Workout</button>
 
@@ -47,5 +50,4 @@
 
     <script src="script.js"></script>
 </body>
-
 </html>
